@@ -1,0 +1,277 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 14px;
+  font-family: 'Arima Madurai', cursive;
+  background-color: #E5D1FA;
+}
+
+.app {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.title {
+  position: absolute;
+  top: 20px;
+  left: 40px;
+}
+
+/* Form Section Style */
+.form-section {
+  width: 30%;
+  display: flex;
+  align-items: center;
+}
+
+.form-section__wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  margin: 40px;
+  border-radius: 20px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.7);
+}
+
+.form-section__title {
+  margin-bottom: 10px;
+}
+
+.form-section__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-input {
+  border: 3px solid #E5D1FA;
+  border-radius: 10px;
+  outline-color: #a652ff;
+}
+
+.form-input__counter {
+  text-align: right;
+}
+
+.form-input__title {
+  height: 45px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding: 0px 10px;
+}
+
+.form-input__body {
+  height: 300px;
+  padding: 10px;
+  margin-bottom: 40px;
+}
+
+.add-notes__button {
+  height: 45px;
+  border-radius: 10px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: white;
+  border: none;
+  background-color: #a652ff;
+  box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+
+.error-alert {
+  margin-bottom: 20px;
+  text-align: center;
+  color: red;
+  font-weight: bolder;
+}
+
+.add-notes__button:active {
+  transform: translate(4px, 4px);
+  box-shadow: none;
+  transition: ease-in-out 0.2s;
+}
+
+/* Card Style */
+.card-wrapper {
+  width: 46%;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #ffd6dc;
+  border-radius: 20px;
+  box-shadow: 6px 6px 3px #A37D82;
+}
+
+.card-wrapper__content {
+  padding: 20px;
+}
+
+.card-content__title {
+  font-size: 1.3em;
+  word-wrap: break-word;
+}
+
+.card-content__date {
+  margin-bottom: 10px;
+  font-size: .9em;
+}
+
+.card-content__body {
+  font-weight: 700;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.card-wrapper__button {
+  display: flex;
+}
+
+.card-button {
+  width: 50%;
+  height: 45px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.card-button__archive {
+  border-radius: 0px 0px 0px 20px;
+  background-color: #FDBAC4;
+}
+
+.card-button__delete {
+  background-color: #ff7675;
+  border-radius: 0px 0px 20px 0px;
+}
+
+/* Notes Section */
+
+.note-section {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+.note-section__wrapper {
+  width: 100%;
+  display: flex;
+  overflow-y: scroll;
+}
+
+.note {
+  width: 50%;
+}
+
+.note-section__title {
+  font-size: 2em;
+}
+
+.active-notes, .archive-notes {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.empty {
+  margin-top: 40px;
+  width: 100%;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: rgb(255, 76, 76);
+}
+
+/* Search Field Style */
+
+.search-field {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.search-field__input {
+  width: 80%;
+  margin: 20px 0px;
+  height: 45px;
+  font-weight: bold;
+  padding-left: 10px;
+  border-radius: 10px;
+  border: 4px solid #b875ff;
+  outline-color: #8716ff;
+}
+
+@media screen and (max-width: 1430px) {
+  .note-section__wrapper {
+    flex-direction: column;
+  }
+
+  .note {
+    width: 100%;
+  }
+
+  .form-section {
+    width: 40%;
+  }
+
+  .note-section {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .app {
+    flex-direction: column;
+    overflow: scroll;
+    padding: 20px;
+    margin-top: 20px;
+  }
+  .form-section {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .form-section__wrapper {
+    width: 60%;
+  }
+
+  .note-section {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .app {
+    margin-top: 45px;
+  }
+  
+  .title {
+    left: 30px;
+    top: 2px;
+  }
+
+  .form-section__wrapper {
+    width: 100%;
+    margin: 10px;
+  }
+
+  .form-input__body {
+    height: 150px;
+  }
+
+  .card-wrapper {
+    width: 100%;
+  }
+
+  .search-field__input {
+    width: 100%;
+  }
+
+}
